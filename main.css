@@ -10,6 +10,7 @@ body {
     background-position: top center;
 }
 
+/* image */
 .me {
     border: 3px solid;
     border-color: rgba(0, 0, 0, 0);
@@ -20,7 +21,8 @@ body {
     margin-top: 120px;
     margin-left: auto;
     margin-right: auto;
-    transition: 0.3s;
+    transition: 0.2s ease-out;
+    user-select: none;
 }
     .me:hover {
         background: linear-gradient(90deg, rgb(218, 57, 51), #ffffff, rgb(218, 57, 51));
@@ -40,66 +42,133 @@ body {
         }
     }
 
+/* ruairi fitzsimmons */
 h1 {
     font-size: 500%;
     color: rgb(0, 0, 0);
     text-align: center;
     margin: 80px 0 0 0;
     transition: 0.3s;
+    user-select: none;
 }
 
+/* subtitle/info */
 #info {
     font-size: 120%;
     color: rgb(0, 0, 0);
     text-align: center;
+    user-select: none;
 }
 
-.buttons {
+/* contact button */
+.show {
     position: absolute;
-    top: auto;
+    top: 78%;
     left: 50%;
-    padding-top: 50px;
-    margin: 0;
-    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 35px;
+    transform: translate(-50%, -78%);
+    background: rgb(230, 230, 230);
+    color: rgba(32, 32, 32);
+    font-size: 14px;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    transition: 0.1s ease-in;
+    outline: none;
+    user-select: none;
 }
-    .buttons a {
-        text-decoration: none;
-        background-color: rgb(230, 230, 230);
-        color: rgb(32, 32, 32);
-        border-radius: 15px;
-        padding: 5px 15px;
-        width: 50px;
-        height: 50px;
-        margin: 10px;
-        justify-content: center;
-        align-items: center;
-        transition: 0.2s;
+    .show:hover {
+        background: rgb(218, 57, 51);
+        color: white;
     }
-        .buttons a:hover {
-            color: rgb(255, 255, 255);
-            background-color: rgb(218, 57, 51);
-            transform: scale(1.8);
-        }
-        .buttons a:active {
-            background-color: rgb(218, 57, 51);
-            position: relative;
-            top: 0.1em;
+    .show:active {
+        background: rgb(87, 17, 15);
     }
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 30px;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    border: 0;
+    outline: none;
+    transition: 2s;
+}
+.mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(218, 218, 218, 0.8);
+    z-index: 50;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.7s;
+}
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 150px;
+    margin-left: -200px;
+    margin-top: -150px;
+    padding: 10px 0;
+    background: #ffffff;
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s ease-out;
+    transform: translateY(45px);
+    text-align: center;
+}
+    .modal .emailme {
+        display: absolute;
+        color: rgb(141, 141, 141);
+        width: 100%;
+        height: 60px;
+        line-height: 90px;
+    }
+    .modal .email {
+        display: relative;
+        color: black;
+    }
+    .modal .msglinkedin {
+        display: relative;
+        color: black;
+    }
+.active {
+    visibility: visible;
+    opacity: 1;
+}
+.active + .modal {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
 
+/* social media icons */
 .icons {
     position: absolute;
+    display: inline-block;
     top: auto;
     bottom: 3%;
     left: 50%;
     transform: translate(-50%, -50%);
+    user-select: none;
 }
     .icons a{
         text-decoration: none;
+        margin: 0 20px;
     }
         .icons .fab {
         position: relative;
         font-size: 20px;
-        margin: 0 20px;
         color: rgb(146, 146, 146);
         transition: 0.2s;
     }
