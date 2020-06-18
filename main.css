@@ -1,4 +1,8 @@
 @charset "UTF-8";
+@viewport {
+    width: device-width ;
+    zoom: 1.0 ;
+  }
 
 * {
     font-family: 'Questrial', sans-serif;
@@ -62,12 +66,11 @@ h1 {
 
 /* contact button */
 .show {
-    position: absolute;
-    top: 78%;
+    position: relative;
     left: 50%;
     width: 120px;
     height: 35px;
-    transform: translate(-50%, -78%);
+    transform: translate(-50%);
     background: rgb(230, 230, 230);
     color: rgba(32, 32, 32);
     font-size: 14px;
@@ -159,7 +162,7 @@ h1 {
     top: auto;
     bottom: 3%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%);
     user-select: none;
 }
     .icons a{
